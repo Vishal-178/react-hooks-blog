@@ -14,7 +14,7 @@ function CreatePost() {
     fire.collection('post').add({
       title: title.value,
       content: content.value,
-      subtitle: content.value,
+      subtitle: subtitle.value,
       createdAt: new Date(),
     });
   }

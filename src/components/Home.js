@@ -28,7 +28,7 @@ function Home() {
           <Link to={`/post/${post.id}`}>
             <h3>{post.title}</h3>
           </Link>
-          <p>{post.content}</p>
+          <p>{post.subtitle}</p>
         </div>
       ))}
     </div>
