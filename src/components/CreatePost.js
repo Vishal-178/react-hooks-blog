@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { fire } from '../firebase';
 
 function CreatePost() {
   const [title, setTitle] = useState();
@@ -10,6 +11,13 @@ function CreatePost() {
     console.log('title', title);
     console.log('subtitle', subtitle);
     console.log('content', content);
+
+    fire.collection('post').add({
+      title,
+      content,
+      subtitle,
+      createdAt: new Date(),
+    });
   }
   return (
     <div className="create-post">
